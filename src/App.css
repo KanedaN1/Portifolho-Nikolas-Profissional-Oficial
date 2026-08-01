@@ -253,7 +253,7 @@
    ========================================================================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 2rem;
 }
 
@@ -494,6 +494,7 @@
     align-items: center;
     justify-content: center;
     transition: left 0.3s ease;
+    z-index: 999;
   }
   
   .nav-list.open {
@@ -507,5 +508,42 @@
   .footer-container {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .logo-name {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-item {
+    padding-left: 45px;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-dot {
+    left: 6px;
   }
 }
